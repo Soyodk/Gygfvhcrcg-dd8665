@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  celular_virtual:
+    build: .
+    ports:
+      - "8080:8080" # Porta do site
+      - "5900:5900" # Porta VNC
+      - "5555:5555" # Porta ADB
+    volumes:
+      - ./data:/data
